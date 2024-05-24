@@ -1,0 +1,12 @@
+name: OAchievements
+version: '${project.version}'
+main: oachievements.OAchievements
+api-version: '1.20'
+depend:
+  - OPets
+  - OSell
+  - OGens
+  - OMine
+commands:
+  achievement:
+    aliases: [ achievements, conquista, conquistas, missoes ]

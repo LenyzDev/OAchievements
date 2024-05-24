@@ -1,0 +1,51 @@
+#
+# Quest Types:
+# SELL_AMOUNT, USE_SELLWAND, OPEN_GACHA, FUSE_PETS, LEVELUP_PICKAXE, BREAK_REGEN_BLOCK, UPGRADE_GENS, BUY_GENS
+#
+# SELL_AMOUNT: (Default: AMOUNT)
+#    Variables:
+#       - VALUE - The Amount of money in a single sale that the player needs to complete the quest.
+#       - AMOUNT - The Amount of items the player needs to sell to complete the quest.
+# USE_SELLWAND: (Default: AMOUNT)
+#    Variables:
+#       - AMOUNT - The Amount of uses of Sell Wand that the player needs to complete the quest.
+# OPEN_GACHA: (Default: AMOUNT)
+#    Variables:
+#       - VALUE - The Amount of crystals the player needs to spend to complete the quest.
+#       - AMOUNT - The Amount of gachas the player needs to open to complete the quest.
+# FUSE_PETS: (Default: AMOUNT)
+#    Variables:
+#       - VALUE - The Amount of pets stars the player needs to fuse to complete the quest.
+#       - AMOUNT - The Amount of pets the player needs to fuse to complete the quest.
+# LEVELUP_PICKAXE: (Default: AMOUNT)
+#    Variables:
+#       - VALUE - The Level the player needs to reach to complete the quest.
+#       - AMOUNT - The Amount of times the player needs to level up the pickaxe to complete the quest.
+# BREAK_REGEN_BLOCK: (Default: AMOUNT)
+#    Variables:
+#       - AMOUNT - The Amount of regen blocks the player needs to break to complete the quest.
+# UPGRADE_GENS: (Default: AMOUNT)
+#       - AMOUNT - The Amount of times the player needs to upgrade a generator to complete the quest.
+# BUY_GENS: (Default: AMOUNT)
+#       - AMOUNT - The Amount of generators the player needs to buy to complete the quest.
+#
+
+quests:
+  quest1:
+    name: "&aQuest 1"
+    material: "DIAMOND"
+    custom-model-data: 1
+    lore:
+      - "&fThis is the first quest."
+      - "&fIt is a very simple quest."
+      - ""
+      - "&fYou need to sell &a{goal} &fitems using &a/sell&f."
+      - ""
+      - "&fReward: &a$1000"
+      - ""
+      - "{progress}"
+    goal: 1
+    type: "SELL_AMOUNT"
+    variable: "AMOUNT"
+    commands:
+      - "money give {player} 1000"
